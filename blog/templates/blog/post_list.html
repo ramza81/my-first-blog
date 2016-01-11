@@ -1,11 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ramza's blog</title>
-</head>
-<body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</body>
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Django  Blog</a></h1>
+        </div>
+
+        <div>
+            {% for post in posts %}
+                <div>
+                    <p>published: {{post.published_date}}</p>
+                    <p><a href="">{{post.title}}</a></p>
+                    <p>{{post.text|linebreaks}}</p>
+                </div>
+            {% endfor %}
+
+        </div>
+    </body>
 </html>
